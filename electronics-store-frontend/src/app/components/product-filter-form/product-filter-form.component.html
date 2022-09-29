@@ -1,0 +1,24 @@
+<form
+    class="filter-form"
+    [formGroup]="filterForm"
+    (ngSubmit)="trySubmitFilters()"
+>
+    <mat-form-field>
+        <mat-label>Product name</mat-label>
+        <input matInput type="text" formControlName="name" />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="category">
+            <mat-option [value]="0">Any</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button
+        mat-flat-button
+        type="submit"
+        color="primary"
+        [disableRipple]="true"
+    >
+        Search
+    </button>
+</form>

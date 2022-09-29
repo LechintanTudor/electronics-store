@@ -1,0 +1,18 @@
+.content {
+    width: 640px;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.product-list {
+    overflow-y: scroll;
+}
+
+.no-products-found {
+    text-align: center;
+    color: #ff0000;
+}
