@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Lenovo Slimbook",
+        "category": "laptop",
+        "price": 1000,
+        "imageUrl": "http://localhost:3000/images/laptop"
+    },
+    {
+        "id": 2,
+        "name": "iPhone 13 Pro Max",
+        "category": "smartphone",
+        "price": 1500,
+        "imageUrl": "http://localhost:3000/images/smartphone"
+    },
+    {
+        "id": 3,
+        "name": "Samsung SmartTV",
+        "category": "smart tv",
+        "price": 1000,
+        "imageUrl": "http://localhost:3000/images/smart-tv"
+    }
+]
