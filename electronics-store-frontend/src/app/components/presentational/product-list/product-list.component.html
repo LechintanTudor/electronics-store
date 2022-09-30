@@ -1,0 +1,6 @@
+<mat-card *ngIf="products.length === 0" class="product-card no-products-found"
+    >No products were found</mat-card
+>
+<mat-card *ngFor="let product of products" class="product-card">{{
+    product.name
+}}</mat-card>

@@ -1,5 +1,6 @@
+import { Category } from 'src/app/types/category';
 import { ProductFilters } from 'src/app/types/product-filters';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
@@ -8,6 +9,9 @@ import { FormBuilder } from '@angular/forms';
     styleUrls: ['./product-filter-form.component.scss'],
 })
 export class ProductFilterFormComponent {
+    @Input()
+    categories: Category[] = [];
+
     @Output()
     submitFilters = new EventEmitter<ProductFilters>();
 
@@ -21,6 +25,6 @@ export class ProductFilterFormComponent {
     trySubmitFilters(): void {
         const name = this.filterForm.value.name ?? '';
         const categoryId = this.filterForm.value.category ?? 0;
-        // this.submitFilters.emit({ name, categoryId });
+        this.submitFilters.emit({ name, categoryId });
     }
 }

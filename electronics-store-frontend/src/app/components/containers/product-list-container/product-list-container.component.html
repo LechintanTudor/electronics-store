@@ -1,0 +1,9 @@
+<mat-card class="content">
+    <app-product-filter-form
+        [categories]="(categories$ | async) ?? []"
+    ></app-product-filter-form>
+    <app-product-list
+        class="product-list"
+        [products]="(products$ | async) ?? []"
+    ></app-product-list>
+</mat-card>
